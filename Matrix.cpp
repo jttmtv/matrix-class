@@ -246,7 +246,11 @@ Matrix operator*(const Matrix& m1, const Matrix& m2)
 
 Matrix operator*(const float n, const Matrix& m)
 {
-	for (size_t i = 0; i < m.__rows * m.__cols; ++i)
-		m.__data[i] *= n;
+	if (*m.__refcount)
+		for (size_t i = 0; i < m.__rows * m.__cols; ++i)
+			m.__data[i] *= n;
+	else
+		std::cerr << "operator *:Uninitialized memory!" << std::endl;
+	return m;
 }
 
