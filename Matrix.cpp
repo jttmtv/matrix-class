@@ -1,4 +1,4 @@
-#include "Matrix.h"
+#include "Matrix.hpp"
 #include <cblas.h>
 #include <cstring>
 #include <initializer_list>
