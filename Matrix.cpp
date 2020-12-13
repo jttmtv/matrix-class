@@ -65,7 +65,7 @@ Matrix::Matrix(const Matrix &m)
         memcpy(*this, m);
     else
     {
-        memset(*this, __rows, __cols, 0);
+        memset(*this, m.__rows, m.__cols, 0);
         memcpy(__data, m.__data, sizeof(float) * __rows * __cols);
     }
 }
