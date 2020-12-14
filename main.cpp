@@ -1,4 +1,4 @@
-#include "Matrix.hpp"
+#include "Matrix.h"
 #include <iostream>
 #include <chrono>
 #include <iomanip>
@@ -48,18 +48,18 @@ int main()
 		{
 			cout << "TestCase #4:" << endl;
 			Matrix A, B;
-			A.set(6, 9, 1.2);
-			B.set(8, 6);
+			A.set(5, 5, 1);
+			B.set(6, 5);
 			cout << "Original Matrix A:\n" << A << endl;
 			cout << "Original Matrix B:\n" << B << endl;
 			for (int i = 0; i < A.rows(); ++i)
 				for (int j = 0; j < A.cols(); ++j)
-					A[i][j] = sqrt(i + 2 * j);
+					A[i][j] = i;
 			for (int i = 0; i < B.rows(); ++i)
 				for (int j = 0; j < B.cols(); ++j)
-					B[i][j] = sqrt(2 * i + j);
-			cout << "Modified Matrix A:\n" << setiosflags(ios::fixed) << setprecision(3) << A << endl;
-			cout << "Modified Matrix B:\n" << setprecision(3) << B << endl;
+					B[i][j] = j;
+			cout << "Modified Matrix A:\n" << A << endl;
+			cout << "Modified Matrix B:\n" << B << endl;
 			cout << "The result of the multiplication of matrix A and matrix B is:\n" << A * B << endl;
 		}
 		break;
@@ -94,7 +94,7 @@ int main()
 		{
 			cout << "TestCase #7:" << endl;
 			Matrix A, B, C;
-			A.set(6, 8, 1.234);
+			A.set(8, 8, 1);
 			C = B = A;
 			cout << "Matrix A:\n" << A << endl;
 			cout << "Original Matrix B:\n" << B << endl;
