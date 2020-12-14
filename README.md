@@ -1,6 +1,7 @@
 **ARM Demo**
 
 The test file is shown in **main.cpp** under the main branch.
+**Screen captures** are shown in the PNG file under the main branch.
 
 **#1**: In the first test, the list initialization method is used to initialize the matrices A and B, and output the matrices A and B and the result of their multiplication.
 
